@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>💌 Para Você — My Babyssss</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Nunito:wght@300;400;600;700&family=Dancing+Script:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       FUNDO ANIMADO — Corações, estrelas, flores, laços
+  ============================================================ -->
+  <div id="bg-canvas" aria-hidden="true">
+    <!-- Elementos são injetados via JS -->
+  </div>
+
+  <!-- ============================================================
+       TELA INICIAL — Carta 3D
+  ============================================================ -->
+  <section id="hero" class="hero">
+    <div class="section-badge">🌸 FELIZZ DIAS DOS NAMORADUSSS!</div>
+    <p class="hero-tagline"> Um presente feito com amor só para você Millaa my babysss 💕</p>
+
+    <!-- Carta 3D -->
+    <div id="envelope-wrapper" class="envelope-wrapper" role="button" aria-label="Clique para abrir a carta de amor" tabindex="0">
+      <div id="envelope" class="envelope">
+
+        <!-- Verso / fundo da carta -->
+        <div class="envelope-back"></div>
+
+        <!-- Aba inferior (corpo) -->
+        <div class="envelope-body"></div>
+
+        <!-- Aba superior (que abre) -->
+        <div class="envelope-flap"></div>
+
+        <!-- Selo de coração -->
+        <div class="envelope-seal">
+          <span class="seal-heart">❤️</span>
+        </div>
+
+        <!-- Carta interna (revelada ao abrir) -->
+        <div class="letter" id="letter">
+          <div class="letter-inner">
+            <div class="letter-decoration top-deco">✿ ❤ ✿</div>
+            <h1 class="letter-title">Feliz Dia dos<br/>Namorados ❤️</h1>
+            <div class="letter-divider">— ♡ —</div>
+            <p class="letter-body">
+              Obrigado por tudo que você fez meu amor, agora TOMI SEU PRESENTE!<br/><br/>
+              Hoje e sempre, eu sempre vou te amar!!. 🌸
+            </p>
+            <p class="letter-signature">Com todo meu amor, <em>sempre</em> 💕</p>
+            <div class="letter-decoration bottom-deco">✿ ❤ ✿</div>
+          </div>
+        </div>
+
+      </div><!-- /.envelope -->
+
+      <p class="envelope-hint" id="envelope-hint">Clique para abrir 💌</p>
+    </div><!-- /.envelope-wrapper -->
+  </section>
+
+  <!-- ============================================================
+       CONTEÚDO PRINCIPAL (oculto até a carta ser aberta)
+  ============================================================ -->
+  <main id="main-content" class="main-content hidden" aria-hidden="true">
+
+    <!-- ── CONTADOR DE TEMPO ──────────────────────────────────── -->
+    <section class="section section-counter" id="counter-section">
+      <div class="section-badge">🌸 Contador desde o primeiro dia em que a gente começou a namorar. ❤️!</div>
+    
+
+      <h2 class="section-title">Nosso Tempo Juntos!!!</h2>
+      <p class="section-subtitle">Cada segundo me faz me apaixonar mais por essa rockeirinha fofenhaa😜🤘💕</p>
+
+      <div class="counter-grid">
+        <div class="counter-card">
+          <span class="counter-value" id="c-days">000</span>
+          <span class="counter-label">Dias</span>
+        </div>
+        <div class="counter-sep">✦</div>
+        <div class="counter-card">
+          <span class="counter-value" id="c-hours">00</span>
+          <span class="counter-label">Horas</span>
+        </div>
+        <div class="counter-sep">✦</div>
+        <div class="counter-card">
+          <span class="counter-value" id="c-mins">00</span>
+          <span class="counter-label">Minutos</span>
+        </div>
+        <div class="counter-sep">✦</div>
+        <div class="counter-card">
+          <span class="counter-value" id="c-secs">00</span>
+          <span class="counter-label">Segundos</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── GALERIA DE MEMÓRIAS ────────────────────────────────── -->
+    <section class="section section-gallery" id="gallery-section">
+      <div class="section-badge">📸 Alguns momentos meus favoritos ksksks</div>
+      <h2 class="section-title">Galeria das Memóriass :></h2>
+      <p class="section-subtitle">🌸 Cada fotinha guarda 1 um sentimento especial ^^!</p>
+
+      <div class="gallery-grid" id="gallery-grid">
+        <!-- Cartões gerados via JS -->
+      </div>
+    </section>
+
+    <!-- ── MOTIVOS ────────────────────────────────────────────── -->
+    <section class="section section-reasons" id="reasons-section">
+      <div class="section-badge">💖 Do fundo do coração</div>
+      <h2 class="section-title">Motivos pelos Quais Eu Te Amo</h2>
+      <p class="section-subtitle">Uma listinha do quanto eu te amo! 🎀</p>
+
+      <div class="reasons-grid" id="reasons-grid">
+        <!-- Cartões gerados via JS -->
+      </div>
+    </section>
+
+    <!-- ── LINHA DO TEMPO ─────────────────────────────────────── -->
+    <section class="section section-timeline" id="timeline-section">
+      <div class="section-badge">🗓️ Nossa história</div>
+      <h2 class="section-title">Linha do Tempo</h2>
+      <p class="section-subtitle">Os momentos que nos tornaram nós 🌷</p>
+
+      <div class="timeline" id="timeline">
+        <!-- Itens gerados via JS -->
+      </div>
+    </section>
+
+    <!-- ── CARTINHAS INTERATIVAS ──────────────────────────────── -->
+    <section class="section section-minicards" id="minicards-section">
+      <div class="section-badge">💌 Mensagens especiais</div>
+      <h2 class="section-title">Cartinhas para Você</h2>
+      <p class="section-subtitle">Clique para ler cada uma 🎀</p>
+
+      <div class="minicards-grid" id="minicards-grid">
+        <!-- Gerado via JS -->
+      </div>
+    </section>
+
+    <!-- ── RODAPÉ ─────────────────────────────────────────────── -->
+    <footer class="site-footer">
+      <div class="footer-heart">❤</div>
+      <p>Feito com todo o amor do mundo só para você</p>
+      <p class="footer-small">Para sempre e além 🌸✨</p>
+    </footer>
+
+  </main><!-- /#main-content -->
+
+  <!-- ============================================================
+       MODAL DE FOTO
+  ============================================================ -->
+  <div id="photo-modal" class="photo-modal" role="dialog" aria-modal="true" aria-label="Visualizar foto" hidden>
+    <div class="modal-overlay" id="modal-overlay"></div>
+    <div class="modal-box">
+      <button class="modal-close" id="modal-close" aria-label="Fechar">✕</button>
+      <div class="modal-img-wrap">
+        <img id="modal-img" src="" alt="" />
+      </div>
+      <div class="modal-info">
+        <h3 id="modal-title"></h3>
+        <p id="modal-desc"></p>
+      </div>
+      <div class="modal-nav">
+        <button class="modal-nav-btn" id="modal-prev" aria-label="Anterior">‹</button>
+        <span class="modal-counter" id="modal-counter"></span>
+        <button class="modal-nav-btn" id="modal-next" aria-label="Próxima">›</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       CANVAS DE PARTÍCULAS / CONFETES (sobre tudo)
+  ============================================================ -->
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+  <!-- ============================================================
+       MÚSICA (comentado — descomente o <audio> para ativar)
+  ============================================================ -->
+  <!--
+  <audio id="bg-music" loop>
+    <source src="musica.mp3" type="audio/mpeg" />
+  </audio>
+  <button id="music-toggle" class="music-btn" aria-label="Tocar música">🎵</button>
+  -->
+
+  <script src="script.js"></script>
+</body>
+</html>
